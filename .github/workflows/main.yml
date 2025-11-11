@@ -16,18 +16,17 @@ jobs:
       - run: echo "testing code"
       - run: ls -la
       - run: echo "hello nikhil" >> test.txt
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-	with:
-	  name: myartifact
-	  path: test.txt
+      - uses: actions/upload-artifacts@v4
+        with:
+          name: myartifact
+          path: test.txt
   deploy:
     runs-on: ubuntu-latest
     needs: [checkout,build]
     steps:
       - uses: actions/download-artifact@v4
         with:
-	  name: myartifact
+          name: myartifact
       - run: cat test.txt
 
 
