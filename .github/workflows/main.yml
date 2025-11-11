@@ -33,6 +33,7 @@ jobs:
       - run: echo "Using DEV secret = ${{ secrets.devsecret }}"
   deploy-test:
     runs-on: ubuntu-latest
+    if: github.ref_name == 'test'
     environment: test
     needs: [checkout,build,deploy-dev]
     steps:
@@ -44,6 +45,7 @@ jobs:
       - run: echo "Using TEST secret = ${{ secrets.testsecret }}"
   deploy-prod:
     runs-on: ubuntu-latest
+    if: github.ref_name == 'main'
     environment: prod
     needs: [checkout,build,deploy-dev,deploy-test]
     steps:
