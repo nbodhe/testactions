@@ -1,0 +1,11 @@
+name: ci
+
+on: [push]
+
+jobs:
+  runs-on: ubuntu-latest
+  build:
+    steps:
+      - runs: echo "buildingg code"
+      - runs: echo "testing code"
+    
