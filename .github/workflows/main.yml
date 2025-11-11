@@ -16,7 +16,7 @@ jobs:
       - run: echo "testing code"
       - run: ls -la
       - run: echo "hello nikhil" >> test.txt
-      - uses: action/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
 	  name: myartifact
 	  path: test.txt
