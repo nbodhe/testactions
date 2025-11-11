@@ -10,3 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "deploying code"
+  testCompositeAction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/setup-python
+

@@ -1,0 +1,6 @@
+name: "copositeWorkflow"
+runs:
+  using: "composit"
+  steps:
+    - run: echo "testing composite actions"
+
