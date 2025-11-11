@@ -5,8 +5,9 @@ on: [push]
 jobs:
   checkout:
     runs-on: ubuntu-latest
-    - uses: actions/checkout@4
-    - run: ls -lrt
+    steps:
+      - uses: actions/checkout@4
+      - run: ls -lrt
   build:
     runs-on: ubuntu-latest
     steps:
