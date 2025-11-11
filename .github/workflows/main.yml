@@ -3,9 +3,14 @@ name: ci
 on: [push]
 
 jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    - uses: actions/checkout@4
+    - run: ls -lrt
   build:
     runs-on: ubuntu-latest
     steps:
       - run: echo "buildingg code"
       - run: echo "testing code"
+      - run: ls -lrt
     
