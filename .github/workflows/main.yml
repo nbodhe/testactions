@@ -6,6 +6,6 @@ jobs:
   runs-on: ubuntu-latest
   build:
     steps:
-      - runs: echo "buildingg code"
-      - runs: echo "testing code"
+      - run: echo "buildingg code"
+      - run: echo "testing code"
     
